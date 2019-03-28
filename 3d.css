@@ -1,0 +1,42 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: black;
+}
+div.pic{
+    width:120px;
+    height: 180px;
+    /* border:1px solid #f00; */
+    margin:150px auto 0;
+    position: relative;
+    /* 搭建3d环境 */
+    transform-style: preserve-3d;
+    /* 隔多远看 */
+    /* perspective: 800px; */
+    /* 向下扭 */
+    transform: perspective(800px) rotateX(-10deg) rotateY(0deg)
+}
+.pic img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* display: none; */
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #fff;
+    /* 倒影以及渐变 */
+    -webkit-box-reflect: below 10px -webkit-linear-gradient(top,rgba(0,0,0,0) 50%,rgba(0,0,0,0.5) 100%);
+}
+div.pic p{
+    width: 1200px;
+    height: 1200px;
+    background:-webkit-radial-gradient(center center ,600px 600px,rgba(255,255,255,.5),rgba(0,0,0,0));
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    margin-top:-415px;
+    margin-left: -600px;
+    transform: rotateX(90deg);
+    border-radius: 600px;
+}
